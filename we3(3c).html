@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    #highlight {
+      border: 2px solid orange;
+    }
+</head>
+  <p>This is a normal paragraph.</p>
+</body>
+
+index.html:
+<html lang="en">
+  <meta charset="UTF-8">
+  <!-- Internal CSS -->
+    h2 {
+      font-family: Georgia, serif;
+    .internal-box {
+      border: 2px solid orange;
+    }
+  <!-- External CSS -->
+</head>
+<body>
+
+  <h1 style="color: blue; font-size: 28px;">Inline Styled Heading (h1)</h1>
+  <h2>Internal Styled Heading (h2)</h2>
+  <div class="internal-box">
+    This box uses <strong>internal CSS</strong> for styling.
+  </div>
+  <br>
+  <p class="external-paragraph">
+    This paragraph is styled using <strong>external CSS</strong>.
+  </p>
+</body>
+</html>
+
+styles.css:
+/* External CSS styles */
+.external-paragraph {
+  font-size: 18px;
+  color: darkred;
+  background-color: #f0f0f0;
+  padding: 12px;
+  border-left: 4px solid red;
+}

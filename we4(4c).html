@@ -1,0 +1,48 @@
+<html>
+  <title>Login Form with Pseudo-Classes</title>
+    body {
+        <style>
+      padding: 20px;
+
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    /* Pseudo-class: when input is focused */
+       border-color: dodgerblue;
+    }
+    /* Pseudo-class: hover effect on button */
+      background-color: dodgerblue;
+      cursor: pointer;
+    /* Pseudo-class: visited link */
+      color: purple;
+    /* Pseudo-class: invalid input */
+      border-color: red;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: lightgray;
+      border: none;
+      border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+  <div class="form">
+  <h2>Login Form</h2>
+  <form>
+    <label>Username:</label>
+    <input type="text" required placeholder="Enter username"
+    <label>Password:</label>
+    <input type="password" required placeholder="Enter password">
+    <button type="submit">Login</button>
+  </form>
+  <p><a href="#">Forgot password?</a></p>
+</div>
+</body>
+</html>

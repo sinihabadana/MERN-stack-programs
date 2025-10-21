@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Looping through Data</title>
+    </head>
+    <body>
+        <h1>Looping through Object and Array</h1>
+        <button onclick="showData()">Display Data</button>
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <script>
+            function showData()
+            {
+                //for-in loop through object
+                let person={name:"anu",age:18,branch:"cse"};
+                let forInResult="";
+                for(let key in person)
+                {
+                    forInResult+=key+"="+person[key]+" ";
+                }
+                document.getElementById("result1").innerText="For-In loop(object): "+forInResult;
+                //for-each loop through array
+                let family=["daddy","amma","thammudu","anu"];
+                forEachResult="";
+                family.forEach(function(name)
+                {
+                    forEachResult+=name+" ";
+                })
+                document.getElementById("result2").innerText="For-Each Loop(array): "+forEachResult;
+                //for-of loop through array
+                let friends=["kaveri","siniha","prasanna"]
+                let forOfResult="";
+                for(let name of friends)
+                {
+                    forOfResult+=name+" ";
+                }
+                document.getElementById("result3").innerText="For-Of Loop(array): "+forOfResult;
+            }
+        </script>
+    </body>
+</html>

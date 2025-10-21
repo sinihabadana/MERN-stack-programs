@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>Weekdays using Switch case</h1>
+        <label>Enter a number(1-7):</label>
+        <input type="number" id="dayNumber" min="1" max="7"><br><br>
+        <button onclick="showWeekDay()">Show Day</button>
+        <p id="result"></p>
+        <script>
+            function showWeekDay()
+            {
+                let num=parseInt(document.getElementById("dayNumber").value);
+            let date="";
+            switch(num)
+            {
+                case 1:
+                {
+                    date="Sunday";
+                    break;
+                }
+                case 2:
+                {
+                    date="Monday";
+                    break;
+                }
+                case 3:
+                {
+                    date="Tuesday";
+                    break;
+                }
+                case 4:
+                {
+                    date="Wednesday";
+                    break;
+                }
+                case 5:
+                {
+                    date="Thursday";
+                    break;
+                }
+                case 6:
+                {
+                    date="Friday";
+                    break;
+                }
+                case 7:
+                {
+                    date="Saturday";
+                    break;
+                }
+                default:
+                {
+                    document.write("Invalid Input");
+                }
+            }
+            document.getElementById("result").innerHTML=`<strong>Result: </strong>${date}`;
+            }
+        </script>
+    </body>
+</html>

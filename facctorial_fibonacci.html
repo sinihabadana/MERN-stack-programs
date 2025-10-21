@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorial & Fibonacci Calculator</title>
+    </head>
+    <body>
+        <h1>Factorial & Fibonacci Calculator</h1>
+        <label>Enter a Number:</label>
+        <input type="number" id="numInput"><br><br>
+        <button onclick="calculateFactorial()">Factorial</button>
+        <button onclick="calculateFibonacci()">Fibonacci</button>
+        <p id="result"></p>
+        <script>
+            function calculateFactorial()
+            {
+                const num=parseInt(document.getElementById("numInput").value);
+                if(isNaN(num)||num<0)
+                {
+                    document.getElementById("result").innerText="Please enter a non-negative integer!";
+                    return;
+                }
+                let fact=1
+                for(let i=1;i<=num;i++)
+                {
+                    fact*=i;
+                }
+                document.getElementById("result").innerText="Factorial of "+num+" is "+fact;
+            }
+            function calculateFibonacci()
+            {
+                const num=parseInt(document.getElementById("numInput").value);
+                if(isNaN(num)||num<=0)
+                {
+                    document.getElementById("result").innerText="Please enter a non-negative integer!";
+                    return;
+                }
+                let fib="";
+                let a=0;
+                let b=1;
+                let c=a+b;
+                fib=a+" "+b+" ";
+                while(c<=num)
+                {
+                    fib+=c+" ";
+                    a=b;
+                    b=c;
+                    c=a+b;
+                }
+                document.getElementById("result").innerText="The "+num+"th Fibonacci number is "+fib;
+            }
+        </script>
+    </body>
+</html>
